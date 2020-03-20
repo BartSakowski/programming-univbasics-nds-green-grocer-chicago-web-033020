@@ -29,8 +29,6 @@ def consolidate_cart(cart)
   new_cart
 end
 
-
-
 def apply_coupons(cart, coupons)
   i = 0
   while i < coupons.length
@@ -57,9 +55,6 @@ def apply_coupons(cart, coupons)
   cart
 end
 
-
-
-
 def apply_clearance(cart)
   counter = 0
   while counter < cart.length
@@ -72,13 +67,17 @@ def apply_clearance(cart)
 end
 
 def checkout(cart, coupons)
-  # Consult README for inputs and outputs
-  #
-  # This method should call
-  # * consolidate_cart
-  # * apply_coupons
-  # * apply_clearance
-  #
-  # BEFORE it begins the work of calculating the total (or else you might have
-  # some irritated customers
+  consolidate_cart = consolidate_cart(cart)
+  couponed_cart = apply_coupons(consolidate_cart)
+  final_cart = apply_clearance(couponed_cart)
+  total = 0
+  counter = 0
+  while counter < final_cart.length
+    total += final[counter][:price] * final_cart[counter][:count]
+    counter += 1
+  end
+  if total > 100
+    tatal -= (total - 0.10)
+  end
+  total
 end
