@@ -6,23 +6,7 @@ while i < collection.length
   if name == collection[i][:item] ? collection[i][:item] : nil
     i += 1
   end
-end
 
-
-
-
-
-
-
-def find_item_by_name_in_collection(name, collection)
-  i = 0
-  while i < collection.length
-    if name == collection[i][:item] ? collection[i][:item] : nil
-    end                                   #Return if T     :  return if FALSE
-    i += 1
-  end
-  nil
-end
   # Consult README for inputs and outputs
 end
 
